@@ -1,0 +1,109 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f3;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #003366;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 24px;
+    position: relative;
+}
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+.header-logo img {
+    height: 50px;
+    margin-right: 12px;
+}
+.container {
+    max-width: 800px;
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+form label {
+    display: block;
+    margin-top: 15px;
+}
+form input,
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+.error {
+    color: red;
+    font-size: 13px;
+}
+button, .btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.info-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.success-message {
+    color: #007700;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.email-note {
+    color: #0066cc;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.trainer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.trainer-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.logo-img {
+    height: 100px;
+    width: 150px;
+    object-fit: cover;
+}
+.trainer-img {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #003366;
+}
+.trainer-info {
+    flex: 1;
+    margin-left: 30px;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 500;
+}

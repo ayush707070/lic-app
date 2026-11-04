@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Rushi Technologies - Success</title>
+ <link href="css/rushi-style.css" rel="stylesheet" type="text/css"/>    
+</head>
+
+<body>
+    <div class="header">
+        Rushi Technologies - Contact: +91-9900012028,+91 8296242028
+     </div>
+    <div class="container">
+        <h2>Registration Successful!</h2>
+         <p  class="success-message" th:text="'Thank you, ' + ${name} + ', for registering for the ' + ${course} + ' course.'"></p>
+         <p  class="email-note" th:if="${emailSent}">A confirmation email has been sent to your registered email address.</p>
+            <a class="btn" th:href="@{/}">Back to Home</a>
+            <div class="trainer-section">
+                <div class="trainer-logos">
+                    <img th:src="@{/images/logo.png}" alt="Rushi Logo" class="logo-img" />
+                    <img th:src="@{/images/trainer.jpg}" alt="Trainer Photo" class="trainer-img" />
+                </div>
+                <div class="trainer-info">
+                    <p><strong>Trainer:</strong> <b>Mr. Balaji Reddy L</b><br />
+                        <strong>Contact:</strong> <b>91-9900012028</b><br />
+                        <strong>Server IP:</strong> <span th:text="${serverIp}"></span><br />
+                        <strong>Client IP:</strong> <span th:text="${clientIp}"></span>
+                    </p>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

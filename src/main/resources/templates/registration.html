@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Rushi Tech - Course Registration</title>
+ <link href="css/rushi-style.css" rel="stylesheet" type="text/css"/>
+</head>
+<div class="header">
+    <span> Rushi Technologies - Balaji Reddy L </span>
+</div>
+<div class="container">
+    <form th:action="@{/register}" th:object="${form}" method="post">
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" />
+        <div class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+
+        <label>Email:</label>
+        <input type="email" th:field="*{email}" />
+        <div class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+
+        <label>Phone:</label>
+        <input type="text" th:field="*{phone}" />
+        <div class="error" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></div>
+
+        <label>Course:</label>
+        <select th:field="*{course}">
+            <option value="" disabled selected>Select Course</option>
+            <option th:each="c : ${courses}" th:value="${c}" th:text="${c}"></option>
+        </select>
+        <div class="error" th:if="${#fields.hasErrors('course')}" th:errors="*{course}"></div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <div class="trainer-section">
+        <div class="trainer-logos">
+            <img th:src="@{/images/logo.png}" alt="Rushi Logo" class="logo-img" />
+            <img th:src="@{/images/trainer.jpg}" alt="Trainer Photo" class="trainer-img" />
+        </div>
+        <div class="trainer-info">
+            <p><strong>Trainer:</strong> <b>Mr. Balaji  Reddy Lachhannagari</b><br />
+                <strong>Contact:</strong> <b>+91-9900012028</b><br />
+                <strong>Server IP:</strong> <span th:text="${serverIp}"></span><br />
+                <strong>Client IP:</strong> <span th:text="${clientIp}"></span>
+            </p>
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>
