@@ -14,7 +14,7 @@ import java.util.List;
 public class RegistrationApiController {
 
    
-    private static final Logger loggerss = LoggerFactory.getLogger(RegistrationApiController.class);
+    private static final Logger loggerssss = LoggerFactory.getLogger(RegistrationApiController.class);
    
     /**
      * Endpoint to fetch all registrations.
